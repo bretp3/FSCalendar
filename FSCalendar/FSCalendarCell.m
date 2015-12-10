@@ -135,7 +135,17 @@
 
 - (void)configureCell
 {
-    _titleLabel.text = [NSString stringWithFormat:@"%@",@([_calendar dayOfDate:_date])];
+    
+    if ([_calendar showShortWeekdayName]) {
+    
+        NSArray *weekdaySymbols = _calendar.calendar.veryShortStandaloneWeekdaySymbols;
+        _titleLabel.text = [NSString stringWithFormat:@"%@", weekdaySymbols[[_calendar weekdayOfDate:_date] - 1]];
+        
+    } else {
+        
+        _titleLabel.text = [NSString stringWithFormat:@"%@",@([_calendar dayOfDate:_date])];
+    
+    }
     
     if (_needsAdjustingViewFrame || CGSizeEqualToSize(_titleLabel.frame.size, CGSizeZero)) {
         _needsAdjustingViewFrame = NO;

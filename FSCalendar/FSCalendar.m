@@ -222,7 +222,7 @@
     self.collectionViewLayout = collectionViewLayout;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.25];
+    view.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.0];
     [self addSubview:view];
     self.topBorder = view;
     

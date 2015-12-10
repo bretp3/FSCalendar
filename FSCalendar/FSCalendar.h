@@ -89,6 +89,7 @@ IB_DESIGNABLE
 @property (assign, nonatomic) IBInspectable BOOL allowsMultipleSelection;
 @property (assign, nonatomic) IBInspectable BOOL pagingEnabled;
 @property (assign, nonatomic) IBInspectable BOOL scrollEnabled;
+@property (assign, nonatomic) IBInspectable BOOL showShortWeekdayName;
 
 @property (readonly, nonatomic) FSCalendarAppearance *appearance;
 @property (readonly, nonatomic) NSDate *minimumDate;
