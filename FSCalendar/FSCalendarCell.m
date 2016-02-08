@@ -138,7 +138,7 @@
     
     if ([_calendar showShortWeekdayName]) {
     
-        NSArray *weekdaySymbols = _calendar.calendar.veryShortStandaloneWeekdaySymbols;
+        NSArray *weekdaySymbols = @[@"S", @"M", @"TU", @"W", @"TH", @"F", @"S"];//_calendar.calendar.veryShortStandaloneWeekdaySymbols;
         _titleLabel.text = [NSString stringWithFormat:@"%@", weekdaySymbols[[_calendar weekdayOfDate:_date] - 1]];
         
     } else {
